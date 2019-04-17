@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SaleManagement.SaleModel
 {
-    class AllSale
+   public class AllSale
     {
         public List<Sale> AllSales { get; set; }
     }

@@ -6,12 +6,22 @@ using System.Threading.Tasks;
 
 namespace SaleManagement.Entities
 {
-    class Sale
+   public class Sale
     {
         public Product Product { get; set; }
         public double AdditionalPercent { get; set; }
         public double Discount { get; set; }
-        public double LastPrice { get { return Product.Price - Discount; } }
+        public double LastPrice { get {
+                if(Discount>=0 && Discount <= 1)
+                {
+
+                return Product.Price - Product.Price*Discount;
+                }
+                else
+                {
+                    return Product.Price;
+                }
+            } }
         public Guid CheckNumber { get; set;}
     }
 }
