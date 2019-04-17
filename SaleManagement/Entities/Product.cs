@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SaleManagement.Entities
 {
-    class Product
+   public class Product
     {
         public string Name { get; set; }
         public Guid Barcode { get; set; }
